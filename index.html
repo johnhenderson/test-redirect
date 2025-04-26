@@ -4,15 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecionando...</title>
-    <!-- Redireciona imediatamente para o WhatsApp -->
-    <meta http-equiv="refresh" content="0;url=https://wa.me/5585985002899">
+    <script>
+        // Lista de números de WhatsApp
+        const numbers = [
+            "5511970697505",
+            "558599962763",
+            "558592634069",
+            "5511969144659",
+            "553288667522",
+            "558596909061",
+            "5516994483005",
+            "558592122362",
+            "5511979981639",
+            "558596663655",
+            "5511947168706"
+        ];
+        // Seleciona um número aleatoriamente
+        const randomNumber = numbers[Math.floor(Math.random() * numbers.length)];
+        // Define o URL de redirecionamento
+        const redirectUrl = `https://wa.me/${randomNumber}`;
+    </script>
+    <!-- Redireciona imediatamente para o número selecionado -->
+    <meta http-equiv="refresh" content="0;url=https://wa.me/" id="metaRedirect">
+    <script>
+        // Atualiza o meta tag com o URL aleatório
+        document.getElementById("metaRedirect").setAttribute("content", `0;url=${redirectUrl}`);
+    </script>
 </head>
 <body>
-    <!-- Conteúdo de fallback caso o redirecionamento não ocorra -->
+    <!-- Conteúdo de fallback -->
     <p>Redirecionando para o WhatsApp...</p>
     <script>
         // Redirecionamento via JavaScript como backup
-        window.location.href = "https://wa.me/5585985002899";
+        window.location.href = redirectUrl;
     </script>
 </body>
 </html>
