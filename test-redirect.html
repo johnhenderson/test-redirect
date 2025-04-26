@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecionando para o WhatsApp</title>
+    <title>Redirecionando...</title>
+    <!-- Redireciona imediatamente para o WhatsApp -->
+    <meta http-equiv="refresh" content="0;url=https://wa.me/5585985002899">
 </head>
 <body>
+    <!-- Conteúdo de fallback caso o redirecionamento não ocorra -->
     <p>Redirecionando para o WhatsApp...</p>
     <script>
-        // Redireciona imediatamente para o número do WhatsApp
-        window.location.replace("https://wa.me/5585985002899");
+        // Redirecionamento via JavaScript como backup
+        window.location.href = "https://wa.me/5585985002899";
     </script>
 </body>
 </html>
